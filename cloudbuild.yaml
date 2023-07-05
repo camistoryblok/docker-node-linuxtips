@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/unirio-389619/cicd-teste', '.']
+    args: ['build', '-t', 'gcr.io/pjthelm/cicd-teste', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/unirio-389619/cicd-teste']
   - name: 'gcr.io/cloud-builders/gcloud'
