@@ -2,13 +2,13 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/pjthelm/cicd-teste', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/unirio-389619/cicd-teste']
+    args: ['push', 'gcr.io/pjthelm/cicd-teste']
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - 'run'
       - 'deploy'
       - 'minha-aplicacao'
-      - '--image=gcr.io/unirio-389619/cicd-teste:latest'
+      - '--image=gcr.io/pjthelm/cicd-teste:latest'
       - '--platform=managed'
       - '--region=us-central1'
       - '--allow-unauthenticated'
